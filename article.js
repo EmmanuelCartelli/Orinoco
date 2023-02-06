@@ -56,6 +56,7 @@ function addToCart(article) {
                 if (camera.option === array[i].option && camera.name === array[i].name) {
                     array[i].quantity++;
                     localStorage.setItem("panier", JSON.stringify(array));
+                    notify();
                     incrementBasket();
                     return;
                 }
@@ -63,11 +64,13 @@ function addToCart(article) {
             array.push(camera);
             localStorage.setItem("panier", JSON.stringify(array));
             incrementBasket();
+            notify();
         }
         else {
             articleArray.push(camera);
             localStorage.setItem("panier", JSON.stringify(articleArray));
             incrementBasket();
+            notify();
         }
     })
 }
@@ -106,3 +109,12 @@ document.querySelector(".basket").addEventListener("click", (e) => {
         alert("Vous n'avez aucun article dans le panier");
     }
 })
+
+function notify() {
+    //notification ajout panier
+    let notification = document.querySelector('.notify')
+    notification.classList.add('show');
+    setTimeout(() => {
+        notification.classList.remove('show');
+    }, 1500);
+}

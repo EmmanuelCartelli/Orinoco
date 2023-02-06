@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,700&display=swap');
 
-body{
+body {
     max-width: 90rem;
     margin: 0 auto;
 }
-header{
+
+header {
     background: black;
 }
-nav{
+
+nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-nav a{
+
+nav a {
     padding: 2rem;
     width: fit-content;
     width: -moz-fit-content;
@@ -20,25 +23,31 @@ nav a{
     color: white;
 }
 
-h2, h3, h4, a{
+h2,
+h3,
+h4,
+a {
     font-family: 'Roboto Mono';
 }
 
-p, span{
+p,
+span {
     font-family: 'Roboto';
 }
 
-.link
-{
+.link {
     display: grid;
     gap: 2rem;
     padding: 2rem;
+    position: relative;
 }
-.link > div:nth-child(2){
+
+.link>div:nth-child(2) {
     padding: 2rem;
     background: #f2f2f2;
     border-radius: 1rem;
 }
+
 select.options {
     appearance: none;
     border: none;
@@ -48,27 +57,32 @@ select.options {
     cursor: pointer;
     font-weight: 700;
 }
+
 select.options:focus {
     outline: none;
 }
-img{
+
+img {
     width: 100%;
     height: 100%;
     border-radius: 1rem;
 }
-.link > div:nth-child(2) > div:nth-child(3){
+
+.link>div:nth-child(2)>div:nth-child(3) {
     display: flex;
     align-items: center;
     padding: 0.5rem;
 }
-.link > div:nth-child(2) > div:nth-child(3) > *{
+
+.link>div:nth-child(2)>div:nth-child(3)>* {
     padding: 0.5rem;
 }
 
-.link > div:nth-child(2) > div:nth-child(3) > span{
+.link>div:nth-child(2)>div:nth-child(3)>span {
     margin-top: 0.2rem;
     font-weight: 500;
 }
+
 button {
     border: none;
     background: black;
@@ -100,3 +114,26 @@ footer h2 {
     color: white;
 }
 
+.notify {
+    background: white;
+    z-index: 5;
+    width: fit-content;
+    display: inline-block;
+    padding: 0.75rem .75rem;
+    background: white;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: 0.35s ease;
+    font-family: 'Roboto Mono';
+}
+
+.notify.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.notify p {
+    font-family: 'Roboto Mono';
+    margin: 0;
+    font-weight: 700;
+}
