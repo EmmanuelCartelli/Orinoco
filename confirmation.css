@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,700&display=swap');
+
+body{
+    margin: 0;
+    max-width: 90rem;
+    margin: auto;
+}
+
+header{
+    background: black;
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+    position: relative;
+
+}
+nav{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+nav a{
+    padding: 2rem;
+    width: fit-content;
+    width: -moz-fit-content;
+    margin: auto;
+    color: white;
+}
+h2, h3, h4, a{
+    font-family: 'Roboto Mono';
+}
+
+p, span{
+    font-family: 'Roboto';
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+}
+
+.infos a {
+    padding: 0.75rem 0.75rem 0.75rem 0;
+    color: white;
+}
+
+footer {
+    padding: 1rem;
+    background: black;
+}
+
+footer h2 {
+    color: white;
+}
+
+main {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-family: 'Roboto Mono';
+}
+a.goback {
+    padding: 0.75rem;
+    color: white;
+    background: black;
+}
+
+main *{
+    text-align: center;
+}

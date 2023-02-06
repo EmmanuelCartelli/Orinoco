@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,700&display=swap');
+
+body{
+    margin: 0;
+    max-width: 90rem;
+    margin: auto;
+}
+
+header{
+    background: black;
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+    position: relative;
+
+}
+nav{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+nav a{
+    padding: 2rem;
+    width: fit-content;
+    width: -moz-fit-content;
+    margin: auto;
+    color: white;
+}
+h2, h3, h4, a{
+    font-family: 'Roboto Mono';
+}
+
+p, span{
+    font-family: 'Roboto';
+}
+
+
+img{
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem;
+    gap: 2rem;
+    background: #ebebeb;
+    max-width: 100%;
+    margin: auto;
+}
+
+.container h2 {
+    grid-area: 1/1/1/4;
+    background: white;
+    padding: 0.5rem 1rem;
+    width: fit-content;
+    width: -moz-fit-content;
+    border-radius: 1rem;
+}
+
+a.link {
+    background: white;;
+    padding: 1.5rem;
+    text-decoration: none;
+    border-radius: 1rem;
+    color: #181818;
+}
+
+a.link:hover{
+    transition-duration: 0.4s;
+    background: #181818;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px 0px;
+}
+.infos {
+    display: flex;
+    flex-direction: column;
+}
+
+.infos a {
+    padding: 0.75rem 0.75rem 0.75rem 0;
+    color: white;
+}
+
+footer {
+    padding: 1rem;
+    background: black;
+}
+
+footer h2 {
+    color: white;
+}
+
+@media screen and (max-width: 1440px){
+    main{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .container h2{
+        grid-area: 1/1/1/4;
+    }
+}
+
+@media screen and (max-width: 980px){
+    main{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .container h2{
+        grid-area: 1/1/1/3;
+    }
+}
+
+@media screen and (max-width: 650px){
+    main{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .container h2{
+        grid-area: 1;
+    }
+}

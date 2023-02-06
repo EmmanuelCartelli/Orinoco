@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="panier.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a class="basket" aria-label="panier" href="panier.html">Panier <span></span></a>
+        </nav>
+    </header>
+    <main>
+        <section class="panier">
+            <div>
+                <h1>Votre Panier</h1>
+                <span class="delete">Supprimer</span>
+            </div>
+            <div class="grid-container">
+                <template>
+                    <div class="card">
+                        <div>
+                            <img>
+                        </div>
+                        <div>
+                            <h3></h3>
+                            <p></p>
+                        </div>
+                        <div class="controller">
+                            <span type="number">Quantité :</span>
+                        </div>
+                        <div class="price">
+                            <h4>Prix en euros: <span></span>€</h4>
+                        </div>
+                    </div>
+                </template>
+            </div>
+            <div class="totalContainer">
+                <h4>Total : <span class="totalCart"></span>€</h4>
+            </div>
+        </section>
+        <section class="checkout">
+            <form>
+                <div class="name">
+                    <input type="text" placeholder="Nom" name="Nom" class="firstname">
+                    <input type="text" placeholder="Prénom" name="Prénom" class="lastname">
+                </div>
+                <div>
+                    <input type="email" placeholder="email" name="E-mail" class="email">
+                    <input type="text" placeholder="Adresse" class="adress">
+                </div>
+                <div>
+                    <input type="text" name="ville" placeholder="Ville" class="city">
+                </div>
+                <input type="submit" class="send">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h2>Orinoco</h2>
+        <div class="infos">
+            <a href="#">Mentions Légales</a>
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">Contact</a>
+        </div>
+    </footer>
+    <script src="panier.js"></script>
+</body>
+</html>
