@@ -88,6 +88,7 @@ function listenForm() {
             fetch("https://projet-orinoco.herokuapp.com/api/cameras/order", options)
                 .then(response => response.json())
                 .then(data => {
+                    console.log(data)
                     localStorage.clear();
                     localStorage.setItem("orderID", data.orderId);
                     window.location.href = "confirmation.html";
